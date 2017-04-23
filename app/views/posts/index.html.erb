@@ -1,9 +1,78 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="head">
+<h1>씨알유디</h1>
+</div>
 
-<h3><%= link_to '새 글 쓰기', posts_new_path %></h3> <br>
-
-<% @posts.each do |p| %>
-    <%= p.title %>
-    <br>
+<section class = "container">
+ 
+ <div class = "bamboo_input">
+     <%= form_for @post do |f| %>
+    CATEGORY<br><select name="post[category_id]" id="post_category_id"><option value="1">사랑</option>
+<option value="2">사는얘기</option>
+<option value="3">저..진지합니다</option></select> <br> 
+    <%= f.text_field :title, placeholder: '제목을 입력해주세요' %><br>
+    <%= f.text_area :content, placeholder: '내용을 입력해주세요', rows: '5' %><br>
+    <%= f.submit %>
 <% end %>
+     
+     
+     
+<!--<form class="new_post" id="new_post" action="/posts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="q3MqBT47C3FWkYqri66dihGI8I1Rd0aR5cKYsCFu8pu0L0EqyadfmJLQbOYWQnyC373HEeFd7FUtI2RlgDagkw==">-->
+
+<!--    <input placeholder="닉네임" type="text" name="post[title]" id="post_title"><br>-->
+<!--    <textarea placeholder="내용을 입력해주세요" rows="5" name="post[content]" id="post_content"></textarea><br>-->
+<!--    <input type="submit" name="commit" value="Create Post">-->
+<!--</form>-->
+</div>
+
+
+<div class = "article">
+<div class = "article_all">
+전체
+<br>
+<% @posts.each do |p| %>
+    <%= p.title %> | <%= link_to '이 글 보기', post_path(p) %>
+    | <%= link_to '수정하기', edit_post_path(p) %>
+    | <%= link_to '삭제하기', post_path(p), method: :delete, data: {confirm: '정말 삭제하시겠습니까?' }%>
+  <br>
+<% end %>
+</div>
+<br>
+
+<div class = "article_love">
+사랑
+<br>
+<% @posts_love.each do |p| %>
+    <%= p.title %> | <%= link_to '이 글 보기', post_path(p) %>
+    | <%= link_to '수정하기', edit_post_path(p) %>
+    | <%= link_to '삭제하기', post_path(p), method: :delete, data: {confirm: '정말 삭제하시겠습니까?' }%>
+<br>
+<% end %>
+</div>
+
+
+<br>
+<br>
+<div class = "article_life">
+사는얘기
+<br>
+<% @posts_life.each do |p| %>
+    <%= p.title %> | <%= link_to '이 글 보기', post_path(p) %>
+    | <%= link_to '수정하기', edit_post_path(p) %>
+    | <%= link_to '삭제하기', post_path(p), method: :delete, data: {confirm: '정말 삭제하시겠습니까?' }%>
+    <br>
+    <% end %>
+</div>
+
+<br>
+<br>
+<div class = "article_serious">
+저..진지합니다
+<br>
+<% @posts_serious.each do |p| %>
+    <%= p.title %> | <%= link_to '이 글 보기', post_path(p) %>
+    | <%= link_to '수정하기', edit_post_path(p) %>
+    | <%= link_to '삭제하기', post_path(p), method: :delete, data: {confirm: '정말 삭제하시겠습니까?' }%>
+    <br>
+    <% end %>
+</div>
+</div>

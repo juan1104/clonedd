@@ -1,3 +1,82 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.head{
+    text-align: center;
+    font-size: 30px;
+    font-family:"굴림체";
+    color: white;
+}
+body{
+    
+     background-color: rgb(190,146,126);
+     background-size: cover;
+}
+.container { 
+    background-image: url(http://blog.naver.com/moon_1547?Redirect=Log&logNo=220131316138);
+  width: 900px;
+  margin: 5% auto;
+}
+.article{
+    margin-top: 5%;
+    border: 1px, 1px, 1px, 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(52,67,25);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.article_all{
+  margin-top: 5%;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(244,241,196);
+  box-shadow: 10px;
+}
+.article_love{
+  margin-top: 5%;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(244,241,196);
+  box-shadow: 10px;
+}
+.article_life{
+  margin-top: 5%;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(244,241,196);
+  box-shadow: 10px;
+}
+.article_serious{
+  margin-top: 5%;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(244,241,196);
+  box-shadow: 10px;
+}
+.bamboo_input{
+     border: 1px solid;
+     margin: 2px;
+    text-align: center;
+    width: 100%;
+     border-radius: 15px;
+    //  background-color: #FFFF7E;
+     border:none;
+}
+ .bamboo_submit {
+    border-top: 3px solid #d0d1d5;
+    padding: 10px;
+  }
+  form {
+    display: block;
+    margin-top: 0em;
+}

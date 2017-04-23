@@ -1,0 +1,17 @@
+<h1>이 글의 카테고리는: <%= @post.category.name %></h1>
+<h1>이 글의 제목은: <%= @post.title %></h1>
+<p>이 글의 내용은: <%= @post.content %></p>
+
+<%= link_to '목록보기' , posts_path %>
+<br>
+<%= p.comments.each do |c| %>
+    <%= c.content %><br>
+    <% end %>
+    
+    
+<%= form_for @comment, url :post_comments_path(post_id: p.id) do |c|%>
+     <%= c.text_area :content %><br>
+     <%= c.submit "작성하기"%>
+     <% end %>
+     <hr>
+     <% end %>
