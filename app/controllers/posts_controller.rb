@@ -6,6 +6,8 @@ class PostsController < ApplicationController
     @posts_serious = @posts.where(category_id: 3)
     @post = Post.new
     @categories = Category.all
+    
+    @posts = Post.search(params[:search])
   end
 
   def new

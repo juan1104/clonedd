@@ -3,6 +3,16 @@
 </div>
 
 <section class = "container">
+    
+<hr>
+검색
+<%= form_tag posts_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+<br>
  
  <div class = "bamboo_input">
      <%= form_for @post do |f| %>
